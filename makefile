@@ -1,8 +1,5 @@
-
-.PHONY: clean
-
-main.out: main.cpp
-	g++ -Wall main.cpp -o main.out
-
+default:
+	# write command to test your files (you do not need it for your submissions)
+        g++ -Wall HashTable.cpp -o HashTable.out
 clean:
-	rm -f main.out
+	rm *.out
