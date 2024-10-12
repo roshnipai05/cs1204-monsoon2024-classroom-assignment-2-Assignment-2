@@ -151,11 +151,11 @@ public:
         {
             if (Array0[i] == -1)
             {
-                cout << " - ";
+                cout << "- ";
             }
             else
             {
-                cout << " " << Array0[i] << " ";
+                cout << Array0[i] << " ";
             }
         }
         cout << endl;
