@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -40,7 +41,7 @@ public:
     int primeResize(int currentSize)
     {
         int num = currentSize * 2;
-        while (!primeCheck(num + 1))
+        while (primeCheck(num) != true)
         {
             num += 1;
         }
@@ -86,7 +87,7 @@ public:
 
     void insert(int key)
     {
-        int load = entered / (float)size; // Cast to float to avoid integer truncation
+        float load = entered / (float)size; // Cast to float to avoid integer truncation
         if (load >= loadfactor)
         {
             Resizing();
@@ -105,13 +106,13 @@ public:
         }
         int position = (index + j * j) % size;
         if (Array0[position] == -1)
-            Array0[position] = key;
+            {Array0[position] = key;
+            entered += 1;}
         else
         {
             cout << "Max probing limit reached!" << endl;
             return;
         }
-        entered += 1;
     }
 
     void remove(int key)
